@@ -46,3 +46,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+//=====================
+html, body, #app {
+  max-width: 1024PX;
+  height: 100%;
+  margin: auto;
+}

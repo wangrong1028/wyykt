@@ -1,88 +1,88 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 
-import Home from "../views/Home";
-import Classify from "../views/Classify";
-import Hot from "../views/Hot";
-import Introduction from "../views/Introduction";
-import Login from "../views/Login";
-import My from "../views/My";
-import Register from "../views/Register";
-import Search from "../views/Search";
-import User from "../views/User";
-import Cart from "../views/User/Cart";
-import MyCoupon from "../views/User/MyCoupon";
-import Order from "../views/User/Order";
-import PayCard from "../views/User/PayCard";
-import Promoter from "../views/User/Promoter";
+import Home from '../views/Home'
+import Classify from '../views/Classify'
+import Hot from '../views/Hot'
+import Introduction from '../views/Introduction'
+import Login from '../views/Login'
+import My from '../views/My'
+import Register from '../views/Register'
+import Search from '../views/Search'
+import User from '../views/User'
+import Cart from '../views/User/Cart'
+import MyCoupon from '../views/User/MyCoupon'
+import Order from '../views/User/Order'
+import PayCard from '../views/User/PayCard'
+import Promoter from '../views/User/Promoter'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes: [
     {
-      path: "/home",
+      path: '/home',
       component: Home
     },
     {
-      path: "/classify",
+      path: '/classify',
       component: Classify
     },
     {
-      path: "/hot",
+      path: '/hot',
       component: Hot
     },
     {
-      path: "/introduction",
+      path: '/introduction',
       component: Introduction
     },
     {
-      path: "/login",
+      path: '/login',
       component: Login
     },
     {
-      path: "/my",
+      path: '/my',
       component: My
     },
     {
-      path: "/register",
+      path: '/register',
       component: Register
     },
     {
-      path: "/search",
+      path: '/search',
       component: Search
     },
     {
-      path: "/user",
+      path: '/user',
       component: User,
       children: [
         {
-          path: "cart",
+          path: 'cart',
           component: Cart
         },
         {
-          path: "myCoupon",
+          path: 'myCoupon',
           component: MyCoupon
         },
         {
-          path: "order",
+          path: 'order',
           component: Order
         },
         {
-          path: "payCard",
+          path: 'payCard',
           component: PayCard
         },
         {
-          path: "promoter",
+          path: 'promoter',
           component: Promoter
         }
       ]
     },
     {
-      path: "/",
-      redirect: "/home"
+      path: '/',
+      redirect: '/home'
     }
   ]
-});
+})
 
-export default router;
+export default router

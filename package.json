@@ -9,7 +9,12 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "lib-flexible": "^0.3.2",
     "postcss-pxtorem": "^5.1.1",
+    "px2rem-loader": "^0.1.9",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "swiper": "^5.3.8",
     "vant": "^2.7.1",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",

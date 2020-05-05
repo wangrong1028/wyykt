@@ -1,5 +1,6 @@
 <template>
   <div class="page-home">
+    <!-- 首页头部 header -->
     <header class="j-mw-header">
       <div id="j-mw-header" class="mw-header">
         <a class="mw-header_logo ga-click" href="/" data-category="全局导航" data-action="返回首页"></a>
@@ -15,6 +16,24 @@
         </div>
       </div>
     </header>
+    <!-- 轮播图 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="images" src="../../images/s1.webp" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="images" src="../../images/s2.webp" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="images" src="../../images/s3.webp" alt="">
+            </div>
+        </div>
+        <!-- 分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- 广告区 -->
+    <!-- 畅销好课 -->
     <div class="mw-firstCateIconSet">
       <div class="icon-box">
         <!--Regular list-->
@@ -60,10 +79,10 @@
         </div>
         <div class="f-cb">
           <div class="custom-card custom-card-small f-fl custom-card-withPrice">
-            <a href=""></a>
+            <img src="../../images/hot1.png" alt="">
           </div>
           <div class="custom-card custom-card-small f-fr custom-card-withPrice">
-            <a href=""></a>
+            <img src="../../images/hot2.jpg" alt="">
           </div>
         </div>
       </div>
@@ -72,8 +91,17 @@
 </template>
 
 <script>
+import Swiper from 'swiper'
+import 'swiper/css/swiper.css'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+
+  mounted () {
+    /* eslint-disable */
+    new Swiper('.swiper-container')
+    /* eslint-disable */
+  }
 }
 </script>
 
@@ -121,8 +149,18 @@ export default {
     float: right;
   }
 
+  .swiper-container {
+    width: 100%;
+    height: 148px;
+
+    .images {
+      display: block;
+      width: 100%;
+      height: 148px;
+    }
+  }
+
   .mw-firstCateIconSet {
-    margin-top: 148px;
     margin-bottom: 23px;
   }
 
